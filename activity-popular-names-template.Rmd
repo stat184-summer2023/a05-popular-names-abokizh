@@ -60,10 +60,6 @@ tail(BabyNames)
 summary(BabyNames)
 ```
 
-### Step 2
-
-[This should be done by hand on paper, nothing to show in the HTML doc]
-
 
 ### Step 3 
 
@@ -101,16 +97,12 @@ Using the BabyNames data set, filter the data to display just the 5 names that y
 I will use group_by function to group the data by name and will use filter function to select 5 names.
 
 
-### Step 6
-
-[This should be done by hand on paper, nothing to show in the HTML doc]
-
 ### Step 7
 
 ```{r}
 ## Create my glyph ready data set here
 GlyphReadyForm <- BabyNames %>%
-  group_by(name) %>%
+  group_by(year, name) %>%
   filter(
     name == "Sarah" |
     name == "Rachael" |
